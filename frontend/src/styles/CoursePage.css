@@ -1,0 +1,146 @@
+:root {
+  --sidebar-width: 290px;
+  --chat-width: 360px;
+  --primary-color: #0056b3;
+  --light-gray: #f8f9fa;
+  --border-color: #e9ecef;
+  --text-color: #212529;
+  --text-muted: #6c757d;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fff;
+}
+
+.course-page-container {
+  display: flex;
+  max-width: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-column {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: var(--light-gray);
+  border-right: 1px solid var(--border-color);
+}
+
+.lesson-column {
+  flex-grow: 1;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.lesson-content-area {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  font-family: 'Georgia', serif;
+  color: #333;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  padding: 2.5rem 3rem;
+}
+
+.chat-column {
+  width: var(--chat-width);
+  flex-shrink: 0;
+  height: 100vh;
+  overflow: hidden; 
+  border-left: 1px solid var(--border-color);
+}
+
+.placeholder-container {
+  text-align: center;
+  margin-top: 8rem;
+  padding: 2rem;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+}
+
+.placeholder-title {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.placeholder-text {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.loading-fullscreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.sidebar-column::-webkit-scrollbar,
+.lesson-column::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-column::-webkit-scrollbar-thumb,
+.lesson-column::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --sidebar-width: 210px;
+    --chat-width: 270px;
+  }
+  .lesson-column {
+    padding: 2rem;
+  }
+}
+
+/* @media (max-width: 992px) {
+  .course-page-container {
+    flex-direction: column;
+    overflow-y: auto;
+    height: auto;
+  }
+  .sidebar-column, .chat-column {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .lesson-column {
+    width: 100%;
+    height: auto;
+    order: 2; 
+  }
+  .sidebar-column {
+    order: 1;
+  }
+  .chat-column {
+    order: 3;
+    height: 60vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .lesson-column {
+    padding: 1.5rem;
+  }
+  .lesson-content-area {
+    font-size: 1rem;
+  }
+} */

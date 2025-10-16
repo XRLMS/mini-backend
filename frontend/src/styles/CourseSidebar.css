@@ -1,0 +1,100 @@
+.course-sidebar {
+  padding: 1.5rem 1rem;
+}
+
+.course-header h4 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.course-header p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.accordion-item {
+  border: none;
+  background-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.accordion-button {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: transparent;
+  border-radius: 6px !important;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: rgba(0, 86, 179, 0.1);
+  color: var(--primary-color);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.2);
+}
+
+.accordion-button::after {
+  background-size: 1rem;
+}
+
+.accordion-body {
+  padding: 0 0.5rem !important;
+}
+
+.lecture-block {
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-left: 2px solid var(--border-color);
+  margin-top: 0.5rem;
+}
+
+.lecture-block .small {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lesson-list {
+  padding-left: 0 !important;
+}
+
+.lesson-item {
+  padding: 0.6rem 1rem;
+  margin: 0.25rem 0;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #34495e;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  position: relative;
+}
+
+.lesson-item:hover {
+  background-color: #e9ecef;
+}
+
+.lesson-item.active {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+}
+
+.lesson-item.active::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 3px;
+  background-color: white;
+  border-radius: 3px;
+}
